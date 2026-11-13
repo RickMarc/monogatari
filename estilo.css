@@ -1,0 +1,278 @@
+/* font names
+    Montserrat default | text
+    Playfair Display | beatiful icon
+    Noto Sans JP | icons
+
+*/
+
+:root{
+    --primary-color: #C82E55;
+    --background-color: #111111;
+    --white: #E8E4E8;
+    --default-margin: 2rem 6rem 0rem 6rem;
+
+}
+
+html{
+    font-size: 62.5%;
+    
+}
+
+body{
+    background-color: var(--background-color);
+    color: var(--white);
+    font-family: "Montserrat";
+    margin: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+header{
+   width: 100%;
+    min-height: 100vh;
+    background: #05030a url("imgs/background-1920x1080.png") center center / cover no-repeat;
+    background-attachment: scroll;
+}
+
+.header-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.justify-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5rem;
+    margin: var(--default-margin);
+}
+
+.header-top img{
+    width: 14rem;
+    color: white;
+}
+
+.header-logo img{
+    width: 4rem;
+    margin: 6rem;
+}
+
+
+
+.header-menu ul{
+    list-style-type: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.header-menu a{
+    text-decoration: none;
+    color: var(--white);
+    font-size: 1.8rem;
+}
+
+.hero-content{
+    margin: 15rem 6rem 0rem 6rem;
+}
+
+.hero-content h1{
+    font-family: "Noto Sans JP"; 
+    font-size:6rem;
+    width: 18%;
+    color: var(--white);
+
+}
+
+.hero-content span{
+    color: #C82E55;
+}
+
+.hero-content p{
+    font-size: 4rem;
+    column-rule: var(--white);
+}
+
+.hero-content a{
+    font-size: 2rem;
+    font-family: "Playfair Display";
+    text-decoration: none;
+    background-color: var(--primary-color);
+    padding: 1rem 3rem;
+    border-radius: 4px;
+    color: var(--background-color);
+}
+
+.main{
+    margin: var(--default-margin);
+    display: flex;
+    justify-content: space-between;
+}
+
+.main_text{
+    width: 25%;
+}
+
+.main_text h3{
+    color: var(--white);
+    font-size: 3rem;
+    
+}
+
+.main_text p{
+    font-size: 2rem;
+}
+
+.main_text span{
+    color: var(--primary-color);
+}
+
+.main-img{
+    display: flex;
+    width: 50%;
+
+    justify-content: center;
+}
+
+.card{
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    background-color: #000000;
+    transition: .5s ease-in-out;
+    
+}
+.card img{
+    height: 24rem;
+    width: 18rem;
+}
+
+.card:hover{
+    transform: scale(1.14);
+    
+}
+
+.main-destaque{
+    width: 15%;
+    margin: var(--default-margin);
+}
+
+.page_ideas{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.main-destaque h4{
+    font-size: 2.5rem;
+    margin: 0;
+    color: var(--primary-color);
+}
+
+
+.page_ideas p{
+    font-size: 1.8rem;
+}
+
+
+@media (max-width: 768px) {
+    .main {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-top{
+        flex-direction: column;
+        
+    }
+
+
+    .justify-top {
+        margin: 1rem ;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-content {
+        margin: 8rem 2rem 0;
+        text-align: center;
+        
+    }
+
+    .hero-content h1 {
+        width: 100%;
+        font-size: 3.5rem;
+        
+    }
+
+    .hero-content p {
+        font-size: 2rem;
+    }
+
+    .card{
+        width: 12rem;
+    }
+
+    .card:first-child{
+        margin-left: 20rem;
+    }
+
+    .main_text,
+    .main-destaque {
+        width: 80%;
+        margin: 0 0 3rem;
+    }
+
+    .main-img{
+        width: 20%;
+    }
+
+    .main-destaque{
+        margin-top: 5rem;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1130px)  {
+      .header-top,
+    .main {
+        flex-direction: row;
+        align-items: center;
+        margin: var(--default-margin);
+    }
+    
+
+    .justify-top {
+        margin: 2rem;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .hero-content {
+        width: 20%;
+        margin: 10rem 2rem 0;
+        margin: var(--default-margin);
+    }
+
+    .hero-content h1 {
+        width: 100%;
+        font-size: 4.5rem;
+    }
+
+    .hero-content p {
+        font-size: 3rem;
+    }
+
+    .hero-content a {
+        padding: 2rem;
+    }
+
+    .main {
+        margin: 5rem 3rem;
+    }
+
+    .main_text,
+    .main-img,
+    .main-destaque {
+        width: 100%;
+        margin: 0 0 3rem;
+        
+    } 
+}
